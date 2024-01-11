@@ -1,5 +1,6 @@
 package com.example.hotelbookingbackendeksamen.controller;
 
+import com.example.hotelbookingbackendeksamen.DTO.LoginDTO;
 import com.example.hotelbookingbackendeksamen.model.Guest;
 import com.example.hotelbookingbackendeksamen.repositories.GuestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,19 @@ public class GuestController {
         }
     }
 
+    @PostMapping("/login")
+    public ResponseEntity<Guest> login(@RequestBody LoginDTO loginDTO) {
+        Optional<Guest> optionalGuest = guestRepository.findCustomerByUserNameAndPassword(loginDTO.getUserName(),
+                loginDTO.getPassword());
+
+        if (optionalGuest.isPresent()) {
+            Guest guest1 = optionalGuest.get();
+
+            return ResponseEntity.ok(guest1);
+        }
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+    }
+
     @PostMapping("/createaccount")
     public ResponseEntity<Guest> createAccount(@RequestBody Guest guestInfo) {
 
@@ -57,7 +71,6 @@ public class GuestController {
             guestRepository.save(guest);
             return new ResponseEntity<>(guest, HttpStatus.CREATED);
         }
-
     }
 
 
