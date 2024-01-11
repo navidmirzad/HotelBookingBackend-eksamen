@@ -22,6 +22,8 @@ public class HotelController {
     @Autowired
     HotelService hotelService;
 
+    //CRUD HOTEL
+
     @GetMapping("/allhotels")
     public ResponseEntity<List<Hotel>> getHotels() {
         return ResponseEntity.ok(hotelRepository.findAll());
@@ -43,6 +45,12 @@ public class HotelController {
     @PutMapping("/edithotel/{hotelId}")
     public ResponseEntity<PostHotelDTO> editHotel(@PathVariable int hotelId, @RequestBody PostHotelDTO editedHotel) {
         hotelService.editHotel(hotelId, editedHotel);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @DeleteMapping("/deletehotel/{hotelId}")
+    public ResponseEntity<Hotel> deleteHotel(@PathVariable int hotelId) {
+        hotelRepository.deleteById(hotelId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
