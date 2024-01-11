@@ -1,5 +1,6 @@
 package com.example.hotelbookingbackendeksamen.controller;
 
+import com.example.hotelbookingbackendeksamen.DTO.HotelRoomCountDTO;
 import com.example.hotelbookingbackendeksamen.DTO.PostHotelDTO;
 import com.example.hotelbookingbackendeksamen.model.Hotel;
 import com.example.hotelbookingbackendeksamen.model.Room;
@@ -10,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,6 +30,12 @@ public class HotelController {
     @GetMapping("/allhotels")
     public ResponseEntity<List<Hotel>> getHotels() {
         return ResponseEntity.ok(hotelRepository.findAll());
+    }
+
+    @GetMapping("/roomcount")
+    public ResponseEntity<List<HotelRoomCountDTO>> getAllHotelsWithRoomCount() {
+        List<HotelRoomCountDTO> hotelsWithRoomCount = hotelService.getHotelsWithRoomCount();
+        return ResponseEntity.ok(hotelsWithRoomCount);
     }
 
     @PostMapping("/addhotel")
