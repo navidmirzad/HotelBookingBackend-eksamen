@@ -13,7 +13,7 @@ public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int roomId;
-    private double roomNumber;
+    private int roomNumber; // change to int
     private int numberOfBeds;
     private double price;
     private LocalDateTime created;
@@ -29,7 +29,7 @@ public class Room {
     private Hotel hotel;
 
     // remember to add cascadeType.all but only after implementing function = if room reserved, dont access delete
-    @OneToMany(mappedBy = "room")
+    @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     @JsonBackReference
     private List<Reservation> listOfReservations = new ArrayList<>();
 
@@ -45,7 +45,7 @@ public class Room {
         return roomNumber;
     }
 
-    public void setRoomNumber(double roomNumber) {
+    public void setRoomNumber(int roomNumber) {
         this.roomNumber = roomNumber;
     }
 

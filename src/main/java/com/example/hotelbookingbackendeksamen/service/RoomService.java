@@ -1,6 +1,5 @@
 package com.example.hotelbookingbackendeksamen.service;
 
-import com.example.hotelbookingbackendeksamen.DTO.PostHotelDTO;
 import com.example.hotelbookingbackendeksamen.model.Hotel;
 import com.example.hotelbookingbackendeksamen.model.Room;
 import com.example.hotelbookingbackendeksamen.repositories.HotelRepository;
@@ -11,26 +10,23 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class HotelService {
+public class RoomService {
+
+    @Autowired
+    RoomRepository roomRepository;
 
     @Autowired
     HotelRepository hotelRepository;
 
-    public Hotel editHotel(int hotelId, PostHotelDTO editedHotel) {
+    public void addRoomToHotel(int hotelId, Room room) {
         Optional<Hotel> foundHotel = hotelRepository.findHotelByHotelId(hotelId);
-        Hotel newHotel = null;
 
         if (foundHotel.isPresent()) {
-
-            newHotel = foundHotel.get();
-            newHotel.setName(editedHotel.getName());
-            newHotel.setStreet(editedHotel.getStreet());
-            newHotel.setCity(editedHotel.getCity());
-            newHotel.setZipcode(editedHotel.getZipcode());
-            newHotel.setCountry(editedHotel.getCountry());
-            hotelRepository.save(newHotel);
+            Hotel hotel = foundHotel.get();
+            room.setHotel(hotel);
+            hotel.getListOfRooms().add(room);
+            roomRepository.save(room);
         }
-        return newHotel;
     }
 
 }

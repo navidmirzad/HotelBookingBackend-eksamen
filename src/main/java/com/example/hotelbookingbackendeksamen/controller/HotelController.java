@@ -2,6 +2,7 @@ package com.example.hotelbookingbackendeksamen.controller;
 
 import com.example.hotelbookingbackendeksamen.DTO.PostHotelDTO;
 import com.example.hotelbookingbackendeksamen.model.Hotel;
+import com.example.hotelbookingbackendeksamen.model.Room;
 import com.example.hotelbookingbackendeksamen.repositories.HotelRepository;
 import com.example.hotelbookingbackendeksamen.service.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,6 +54,8 @@ public class HotelController {
         hotelRepository.deleteById(hotelId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+
 
 
 
