@@ -1,11 +1,8 @@
 package com.example.hotelbookingbackendeksamen.controller;
 
-import com.example.hotelbookingbackendeksamen.DTO.PostHotelDTO;
 import com.example.hotelbookingbackendeksamen.DTO.PostRoomDTO;
-import com.example.hotelbookingbackendeksamen.model.Hotel;
 import com.example.hotelbookingbackendeksamen.model.Room;
 import com.example.hotelbookingbackendeksamen.repositories.RoomRepository;
-import com.example.hotelbookingbackendeksamen.service.HotelService;
 import com.example.hotelbookingbackendeksamen.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
