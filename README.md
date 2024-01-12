@@ -1,7 +1,7 @@
 QuickBook - Hotel Booking System
 Oversigt:
 
-Dette repository indeholder projektet "QuickBook," en 24-timers opgave for Programmering-2 kurset på 3. semester på KEA (Copenhagen School of Design and Technology) i efteråret 2023. Formålet er at designe en simpel full-stack webapplikation for et nyt hotelbookingfirma med fokus på håndtering af hoteller, hotelværelser og gæsters reservationer.
+Dette repository indeholder projektet "QuickBook," en 24-timers opgave for Programmering-2 kurset på 3. semester på KEA (Copenhagen School of Design and Technology). Formålet er at designe en simpel full-stack webapplikation for et nyt hotelbookingfirma med fokus på håndtering af hoteller, hotelværelser og gæsters reservationer.
 
 Anvendte Teknologier:
 
