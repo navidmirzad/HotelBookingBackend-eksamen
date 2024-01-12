@@ -31,3 +31,5 @@ Instruktioner:
 Opsæt MySQL-databasen og konfigurer application.properties-filen.
 Kør Spring Boot-applikationen for at starte backend-serveren.
 Åbn HTML-filen i en webbrowser for at interagere med Hotel Booking System.
+
+- Frontend Repository: https://github.com/navidmirzad/HotelBookingFrontend-eksamen/tree/main 
