@@ -1,35 +1,33 @@
-
 QuickBook - Hotel Booking System
+Oversigt:
 
-Dette projekt, med titlen "QuickBook," er en 24-timers opgave for kurset Programmering-2 i 3. semester på KEA (Copenhagen School of Design and Technology) i efteråret 2023.
+Dette repository indeholder projektet "QuickBook," en 24-timers opgave for Programmering-2 kurset på 3. semester på KEA (Copenhagen School of Design and Technology) i efteråret 2023. Formålet er at designe en simpel full-stack webapplikation for et nyt hotelbookingfirma med fokus på håndtering af hoteller, hotelværelser og gæsters reservationer.
 
-Formål:
-Design en simpel full-stack webapplikation til et nyt hotelbookingfirma med fokus på at håndtere hoteller, hotelværelser og gæsters reservationer.
+Anvendte Teknologier:
 
-Anvendte teknologier:
-
-Backend: Implementeret med Spring Boot, JPA/Hibernate og en MySQL-database.
+Backend: Implementeret med Spring Boot, JPA/Hibernate og en MySQL database.
 Frontend: Udviklet som en separat HTML/CSS/JavaScript-applikation.
 Funktioner:
 
 Hotelstyring: Opret, opdater og slet hotelinformation.
-Værelsesstyring: Håndter forskellige aspekter af hotelværelser som antal senge, priser, osv.
-Reservationsystem: Tillad gæster at foretage reservationer for hotelværelser.
+Værelsesstyring: Håndter forskellige aspekter af hotelværelser, såsom antal senge, priser osv.
+Reservationsystem: Gør det muligt for gæster at foretage reservationer af hotelværelser.
 Teknologistak:
 
 Backend: Spring Boot, JPA/Hibernate, MySQL
 Frontend: HTML, CSS, JavaScript
-Sådan køres projektet:
+Sådan Kører Du Projektet:
 
-Sørg for, at du har Java, Spring Boot og en MySQL-database installeret.
+Sikr dig, at du har Java, Spring Boot og en MySQL-database installeret.
 Kør Spring Boot-applikationen for at starte backend-serveren.
 Åbn HTML/CSS/JavaScript-applikationen i en webbrowser.
 Projektstruktur:
 
 backend/: Indeholder Spring Boot-applikationen.
-frontend/: Inkluderer HTML-, CSS- og JavaScript-filer til frontend.
+frontend/: Inkluderer HTML, CSS og JavaScript-filer til frontend.
+
 Instruktioner:
 
-Opsæt MySQL-databasen og konfigurér application.properties-filen.
+Opsæt MySQL-databasen og konfigurer application.properties-filen.
 Kør Spring Boot-applikationen for at starte backend-serveren.
 Åbn HTML-filen i en webbrowser for at interagere med Hotel Booking System.
